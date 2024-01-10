@@ -24,10 +24,10 @@ def a (a,b) ;
 ```
 
 ```
-doker login ghcr.io -u machdees -p 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
+doker login ghcr.io -u machdees -p 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
 
 docker push ghcr.io/NAMESPACE/IMAGE_NAME:2.5
-* docker push ghcr.io/machdees/Devops_Learning:latest
+* docker push ghcr.io/machdees/devops_learning:latest
 
 docker inspect ghcr.io/NAMESPACE/IMAGE_NAME
 
