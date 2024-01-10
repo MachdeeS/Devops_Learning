@@ -26,7 +26,7 @@ pipeline {
                 )])
                 {
                     sh "docker login ghcr.io -u ${env.githubUser} -p ${env.githubPassword}"
-                    sh "docker push ghcr.io/machdees/Devops_Learning"
+                    sh "docker push ghcr.io/machdees/devops_learning"
                 }
             }
         }
