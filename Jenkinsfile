@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage('Build Stage (Docker)' ) {
-            agent {label 'buildserver'}
+            agent {label 'build-server'}
             steps {
                 sh docker build - t ghcr.io/machdees/devops_learning
             }
