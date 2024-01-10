@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mybd:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root1234
+      - MYSQL_DATABASE=test_db
+      - MYSQL_USER=test_db
+      - MYSQL_PASSWORD=12345678
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+  myweb:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=mybd
+    ports:
+      - 9093:80
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9094:80
+
+
+# docker compose up -d
+# docker compose down
+# docker compose up -d --build
+# docker compose up -d --force-recreate
+# docker compose ls
+# docker compose -p devops_learning down
+# docker compose -p devops_learning up -d
+
