@@ -21,14 +21,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld
+  name: devops-learning
   labels:
-    app: hello-world
+    app: devops-learning
 spec:
   selector:
-    app: hello-world
+    app: devops-learning
   ports:
-    - name: http
+    - name: web-port
       protocol: TCP
       port: 8081
       targetPort: 80
