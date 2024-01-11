@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops_learning
+  name: devops-learning
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops_learning
+      app: devops-learning
   template:
     metadata:
       labels:
-        app: devops_learning
+        app: devops-learning
     spec:
       containers:
-        - name: devops_learning-server
+        - name: devops-learning-server
           image: ghcr.io/machdees/devops_learning
           ports:
             - containerPort: 80
