@@ -15,6 +15,7 @@ spec:
       containers:
         - name: user16-server
           image: ghcr.io/machdees/devops_learning
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
